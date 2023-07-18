@@ -98,7 +98,7 @@ const ContactUs = () => {
             </Typography>
             <div style={{width:"100%", height:"2px", backgroundColor:"black"}}></div>
             <Typography variant="h6" gutterBottom>
-              admin@copyassignment.com
+              dk901694@gmail.com
             </Typography>
           </Paper>
         </Grid>

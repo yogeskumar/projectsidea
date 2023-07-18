@@ -11,6 +11,10 @@ import { GlobalIdContext } from '../../HandlingContext/IdContext';
 
 export default function ProjectCard({project}) {
   const { id, setId } = React.useContext(GlobalIdContext);
+  const CharacterLimitedTypography = ( text, limit) => {
+    const truncatedText = text.length > limit ? text.slice(0, limit) + '...' : text;
+  return truncatedText;
+  };
     const navigate = useNavigate();
     const setGlobalId = (projectId) => {
       setId(projectId);
@@ -20,19 +24,25 @@ export default function ProjectCard({project}) {
 
     return (
         <Grid item xs={12} sm={6} md={4} key={project.id} onClick={()=>setGlobalId(project.id)} sx={{pointer:"cursor"}}>
-            <Card sx={{ minWidth: 280, maxWidth: 300, margin: "10px auto", pointer:"cursor",  }}>
+            <Card sx={{ width:300, margin: "10px auto", pointer:"cursor",  height:457}}>
              <CardMedia
                  component="img"
-                 height="auto"
+                //  height="auto"
                  image={project.image}
+                 sx={{maxHeight:200}}
              />
               {/* <CardMedia component="img" image={project.imageUrl} alt={project.title} height="140" /> */}
-              <CardContent sx={{height:235, display:"flex", flexDirection:"column", justifyContent:"space-between"}}>
+              <CardContent sx={{display:"flex", flexDirection:"column", justifyContent:"space-between"}}>
                 <Typography variant="h6" component="div">
                   {project.title}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {project.smalldesc}
+                <Typography variant="body2" color="text.secondary"
+      sx={{
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+        // whiteSpace: 'nowrap',
+      }}>
+                  {CharacterLimitedTypography(project.smalldesc, 120)}
                 </Typography>
                 <Box sx={{ mt: 2 }}>
                   <Typography variant="body2" color="text.secondary">
@@ -47,9 +57,9 @@ export default function ProjectCard({project}) {
                     <strong>Price:</strong> {project.price}
                   </Typography>
                 </Box>
+              </CardContent>
                <Button variant="contained"
                  sx={{ width: "100%", mb:0 }}>Click for more info</Button>
-              </CardContent>
             </Card>
           </Grid>
     );
