@@ -24,7 +24,7 @@ const AboutProject = () => {
   return (
     <Container maxWidth="md" sx={{ minWidth:"300px", margin:"auto", mb:2 }}>
       <Typography variant="h4" align="center" gutterBottom>
-      Project ID: {project.title}
+      {project.title}
       </Typography>
       <Grid item xs={12}>
         <Paper elevation={3} sx={{ padding: "20px" }}>
