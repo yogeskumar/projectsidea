@@ -23,7 +23,7 @@ export default function ProjectCard({project}) {
     };
 
     return (
-        <Grid item xs={12} sm={6} md={4} key={project.id} onClick={()=>setGlobalId(project.id)} sx={{pointer:"cursor"}}>
+        <Grid item xs={12} sm={6} md={4} key={project.id} onClick={()=>setGlobalId(project.id)} sx={{pointer:"cursor", margin:"auto"}}>
             <Card sx={{ width:300, margin: "10px auto", pointer:"cursor",  height:457}}>
              <CardMedia
                  component="img"
