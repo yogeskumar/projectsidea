@@ -4,7 +4,7 @@ import Navbar from "./components/NavBar/index";
 import AboutProject from "./pages/AboutProject";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-// import BookASession from "./pages/BookASession";
+import BookASession from "./pages/BookASession";
 import ContactUs from "./pages/ContactUs";
 // import AboutUs from "./pages/AboutUs";
 // import FAQ from "./pages/FAQ";
@@ -59,7 +59,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/aboutproject/:id" element={<AboutProject />} />
-        {/* <Route exact path="/bookasession" element={<BookASession />} /> */}
+        <Route exact path="/bookasession" element={<BookASession />} />
         {/* <Route exact path="/customproject" element={<CustomProject />} /> */}
         {/* <Route exact path="/aboutus" element={<AboutUs />} /> */}
         <Route exact path="/contactus" element={<ContactUs />} />

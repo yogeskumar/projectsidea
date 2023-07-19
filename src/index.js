@@ -7,12 +7,26 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
+const theme = createTheme({
+  spacing: 8, // Set your desired spacing value
+  palette: {
+    primary: {
+      main: "#007bff", // Set your primary color
+    },
+    text: {
+      primary: "#000000", // Set your text color
+    },
+  },
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+  <ThemeProvider theme={theme}>
     <App />
+  </ThemeProvider>
   </React.StrictMode>
 );
 

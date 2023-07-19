@@ -38,7 +38,7 @@ export default function ButtonAppBar() {
                         Home
                     </Typography>
                     {/* <Button color="inherit" onClick={()=>navigate("/customproject")}>Request a Project</Button> */}
-                    {/* <Button color="inherit" onClick={()=>navigate("/bookasession")}>Book a session</Button> */}
+                    <Button color="inherit" onClick={()=>navigate("/bookasession")}>Book a session</Button>
                     <Button color="inherit" onClick={()=>navigate("/contactus")}>Contact Us</Button>
                     {/* <Button color="inherit" onClick={()=>navigate("/aboutus")}>About Us</Button> */}
                     {/* <Button color="inherit" onClick={()=>navigate("/faq")}>FAQs</Button> */}
@@ -63,10 +63,10 @@ export default function ButtonAppBar() {
                         <Typography variant="h6" onClick={()=>{handleMenuToggle()
                             navigate("/customproject")}} sx={{ width: "100%", cursor: "pointer" }}>Request a Project</Typography>
                     </ListItem> */}
-                    {/* <ListItem sx={{ '&:hover': { backgroundColor: '#5badff' } }}>
+                    <ListItem sx={{ '&:hover': { backgroundColor: '#5badff' } }}>
                         <Typography variant="h6" onClick={()=>{handleMenuToggle()
                             navigate("/bookasession")}} sx={{ width: "100%", cursor: "pointer" }}>Book a session</Typography>
-                    </ListItem> */}
+                    </ListItem>
                     <ListItem sx={{ '&:hover': { backgroundColor: '#5badff' } }}>
                         <Typography variant="h6" onClick={()=>{handleMenuToggle()
                             navigate("/contactus")}} sx={{ width: "100%", cursor: "pointer" }}>Contact Us</Typography>
