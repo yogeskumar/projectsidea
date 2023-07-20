@@ -15,6 +15,7 @@ import { GlobalProjectsProvider } from "./HandlingContext/ProjectsContext";
 import { GlobalIdProvider } from "./HandlingContext/IdContext";
 import { GlobalDomainsProvider } from "./HandlingContext/DomainsContext";
 import { GlobalPricesProvider } from "./HandlingContext/PricesContext";
+import ProjectIdeas from "./pages/ProjectIdeas";
 
 function App() {
   useEffect(() => {
@@ -60,6 +61,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/aboutproject/:id" element={<AboutProject />} />
         <Route exact path="/bookasession" element={<BookASession />} />
+        <Route exact path="/projectideas" element={<ProjectIdeas />} />
         {/* <Route exact path="/customproject" element={<CustomProject />} /> */}
         {/* <Route exact path="/aboutus" element={<AboutUs />} /> */}
         <Route exact path="/contactus" element={<ContactUs />} />
