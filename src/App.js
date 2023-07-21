@@ -2,7 +2,7 @@ import "./App.css";
 import React, {useEffect} from "react";
 import Navbar from "./components/NavBar/index";
 import AboutProject from "./pages/AboutProject";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import BookASession from "./pages/BookASession";
 import ContactUs from "./pages/ContactUs";
